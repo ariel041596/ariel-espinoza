@@ -1,31 +1,33 @@
 <template>
-  <div class>
-    <div class="text-center">
-      <q-avatar class="q-ml-md" size="150px">
+    <div class="text-center q-pa-sm q-pb-xl">
+      <q-avatar class="q-mt-md" size="150px">
         <img src="../../assets/ariel-profile.jpg" />
       </q-avatar>
       <div class="typewriter">
         <h3 class="q-mb-sm font">Hi, My name's Ariel.</h3>
         <q-btn
           type="a"
-          href="https://drive.google.com/file/d/1JRlyNYZBtBHFtIsWUGhFghGcpTnEpe1L/view?usp=sharing"
+          href="https://drive.google.com/file/d/1E16PytuFHC8UNLsX0y0v1vM5U-b5KoqD/view?usp=sharing"
           label="View CV"
           flat
           target="_blank"
           class="text-warning"
         ></q-btn>
         <!-- <q-btn @click="window.open('CV.doc')">Download</q-btn> -->
-        <h6
+        <h6 v-html="introduction"
           class="q-mt-sm font"
-        >I'm a Full Stack Developer, currently taking BSIT at STI-College Muñoz EDSA</h6>
+        ></h6>
       </div>
-      <q-space></q-space>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      introduction: "I'm a Full Stack Developer who is eager to learn everything."
+    }
+  },
   components: {
     projects: require("components/Projects/MyProjects").default,
     timeline: require("components/Timeline/Timeline").default,

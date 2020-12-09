@@ -31,7 +31,7 @@ const angularLogo = require("../../assets/angular-logo.png")
 export default {
   data(){
     return{
-      logos: [firebaseLogo, nodeLogo, vuejsLogo, quasarLogo, laravelLogo, mySQLLogo, cSharpLogo, angularLogo,arduinoLogo]
+      logos: [laravelLogo, nodeLogo, cSharpLogo, firebaseLogo, mySQLLogo,  vuejsLogo, angularLogo, quasarLogo,  arduinoLogo]
     }
   }
 };

@@ -1,7 +1,6 @@
 <template>
-  <q-page >
-    <div class>
-      <h4 class="text-warning text-center q-pt-xl q-mb-none font">Projects</h4>
+    <div class="text-center justify-center">
+      <h4 class="text-warning text-center q-pt-xl  font">Projects</h4>
       <div class="row q-mt-lg items-start">
        <div
           v-for="(project, index) in projectsData"
@@ -29,7 +28,7 @@
               > 
               </q-carousel-slide>
             </q-carousel>
-            <q-card-section class="text-black" style="height: 150px;">
+            <q-card-section class="text-black card-section" style="height: 150px;" >
               <div
                 class="text-h6"
               >{{project.title}}</div>
@@ -43,7 +42,7 @@
                 label="Play video"
                 no-caps></q-btn></div>
             </q-card-section>
-            <q-card-section class="q-pt-none text-center" >
+            <q-card-section class="q-pt-none text-center tools-logo" >
               <q-avatar class="q-mr-md" v-for="(avatar, index) in project.logos" :key="index">
                 <img  :src="avatar" />
               </q-avatar>
@@ -56,9 +55,7 @@
          <q-video style="height:300px;" :src="this.URL" />
       </q-card>
     </q-dialog>
-
     </div>
-  </q-page>
 </template>
 
 <script>
@@ -144,5 +141,20 @@ export default {
 
 }
 
+@media screen and (min-width: 767px) {
+  // .card-section{
+  //   height: 150px;
+  // }
+  
+ 
+}
+@media screen and (max-width: 768px) {
+  // .card-section {
+  //   height: 170px;
+  // }
+   .tools-logo{
+    padding-top: 20px;
+  }
+}
 
 </style>

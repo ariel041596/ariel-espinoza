@@ -1,5 +1,4 @@
 <template>
- <q-page padding>
      <div class="text-center">
       <h4 class="text-warning text-center q-pt-md q-mb-none font">Events Attended</h4>
       <div class="row q-mt-lg items-start">
@@ -33,13 +32,14 @@
                <div class="text-subtitle2">{{event.project}}  <q-avatar class="q-mr-md" >
                 <img class="image-fit" :src="event.avatar" />
               </q-avatar></div>
+              <div>
+                {{event.description}}
+              </div>
             </q-card-section>
-           
           </q-card>
         </div>
       </div>
      </div>
- </q-page>
 </template>
 
 <script>
@@ -57,7 +57,8 @@ const event = [
         slide: 0,
         title: "Impact Hackathon",
         project: "Agrostat",
-        avatar: agrostatAvatar
+        avatar: agrostatAvatar,
+        description: "- An agriculture app that monitors the soil health and detects the weather for the reference of farmers for crop rotation. "
 
     },
     {
@@ -66,7 +67,8 @@ const event = [
         slide: 0,
         title: "Home Credit Hackathon",
         project: "ConsultMe",
-        avatar: consultMeLogo
+        avatar: consultMeLogo,
+        description: "- A platform that will connects the doctors and people to have a free medical consultations in order to prevent people from taking drugs to an inappropriate symptomps."
     }
 ]
 export default {
